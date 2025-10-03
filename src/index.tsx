@@ -10,10 +10,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <KindeProvider
-    clientId={process.env.VITE_KINDE_CLIENT_ID}
-    domain={process.env.VITE_KINDE_DOMAIN}
-    logoutUri={process.env.VITE_KINDE_LOGOUT_URL}
-    redirectUri={process.env.VITE_KINDE_REDIRECT_URL}
+    clientId={process.env.VITE_KINDE_CLIENT_ID || ''}
+    domain={process.env.VITE_KINDE_DOMAIN || ''}
+    logoutUri={process.env.VITE_KINDE_LOGOUT_URL || ''}
+    redirectUri={process.env.VITE_KINDE_REDIRECT_URL || ''}
     // When running local against a custom domain, include the line below
     // useInsecureForRefreshToken={true}
   >
